@@ -1,0 +1,815 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Hearing Test | Hearing First</title>
+    <meta charset="utf-8"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Khula:wght@300;400;600;700;800&family=Lekton:ital,wght@0,400;0,700;1,400&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="styles.css" type="text/css" />
+    <style>
+
+
+        .white-box-with-stroke h1 {
+        font-size: 64px;
+        text-align: center;
+        margin: 60px 7%;
+        margin-bottom: -1px;
+        }
+
+        h2 {
+        font-size: 40px;
+        text-align: left;
+        padding-top: 30px;
+        margin-bottom: -10px;
+        margin-left: 45px;
+        font-weight: bold;
+        color: white;
+        text-shadow: 2px 2px gray;
+        }
+
+        /*BASIC INFO ABOUT THE HEARING TEST*/
+        .info h1{
+        font-size: 60px;
+        margin-left: 53px;
+        margin-bottom: -10px;
+        }
+
+        .info p{
+        font-size: 24px;
+        margin-left: 53px;
+        margin-right: 53px;
+        font-weight: lighter;
+        }
+
+        .info strong{
+        font-size: 36px;
+        font-weight: lighter;
+        }
+
+        /*THE ENTIRE SECTION FOR PICKING THE LOCATION*/
+        .choose {
+        background-color: #B4D2FE;
+        height: auto;
+        width: 90%;
+        margin: 70px auto;
+        border: 1px solid black;
+        box-shadow: 15px 15px 1px #4C92FD;
+        display: flex;
+        flex-wrap: wrap;
+        }
+
+        .choose h1 {
+        font-size: 36px;
+        text-align: left;
+        margin-left: 2%;
+        margin-bottom: 10px;
+        margin-top: 30px;
+        }
+
+        /*CONTAINER FOR THE RADIO OPTIONS*/
+        .container_from_earwax2 {
+        border-radius: 8px;
+        padding: 20px;
+        width:60%;
+        height: auto;
+        box-sizing: border-box;
+        margin: 20px;
+        margin-top:0px;
+        margin-left: 3%;
+        }
+
+        /*THE RADIO OPTIONS THEMSELVES*/
+        .radio-group2 {
+        display: flex;
+        flex-direction: row;
+        height: auto;
+        justify-content: space-between;
+        width: 60%;
+        margin-left: 100px;
+        }
+
+        .radio-group2 label {
+        font-size: 20px;
+        cursor: pointer;
+        display: flex;
+        align-items: center;
+        font-family: 'Khula', 'Roboto Slab', serif;
+        font-weight: bold;
+        }
+
+        .radio-group2 input[type="radio"] {
+        margin-right: 5px;
+        }
+
+        /*THE BLUE BUTTON FOR THE HEARING TEST*/
+        .button {
+        background-color: #007BFF;
+        color: white;
+        border: none;
+        width: 130%;
+        height: 50%;
+        text-align: center;
+        text-decoration: none;
+        font-size: 20px;
+        font-weight: 800;
+        border-radius: 5px;
+        cursor: pointer;
+        transition: background-color 0.3s;
+        box-shadow: 3px 3px 3px rgba(0, 0, 0, 0.60);
+        }
+
+        .button:hover {
+        background-color: #0056b3;
+        }
+
+        
+        /* THE CALENDAR SHOWING WHAT APPOINTMENTS ARE AVAILABLE */
+        .calendar {
+        background-color: #BBD6FE;
+        color: white;
+        width: 90%;
+        border: 2.4px solid black;
+        margin-left: auto;
+        margin-right: auto;
+        }
+
+        .appointment {
+        display: flex;
+        }
+
+        /* THE BLACK BOX DISPLAYING WHAT MONTH IT IS */
+        .month {
+        margin-top: 0;
+        font-size: 64px;
+        text-align: center;
+        margin-bottom: 20px;
+        padding-top: 20px;
+        font-weight: bold;
+        background-color: black;
+        letter-spacing: 12px;
+        height: auto;
+        }
+
+        /* THE ENTIRE DAYS AS A GROUP */
+        .days {
+        display: grid;
+        grid-template-columns: repeat(7, 1fr);
+        gap: 10px;
+        text-align: center;
+        width: 45%;
+        margin:20px;
+        margin-left: 40px;
+        padding-bottom:20px;
+        }
+
+        /* INDIVIDUAL DAYS */
+        .day {
+        background-color: #98cbec;
+        border-radius: 50%;
+        padding: 15px;
+        font-size: 28px;
+        transition: background-color 0.3s;
+        font-weight: bold;
+        }
+
+        .day:hover {
+        background-color: #7fc7f5;
+        }
+
+        .withappont {
+        border-radius: 50%;
+        padding: 15px;
+        font-size: 28px;
+        transition: background-color 0.3s;
+        font-weight: bold;
+        background-color: #4C92FD;
+        }
+
+        .withappont:hover {
+        background-color: #103f85;
+        }
+
+        .empty {
+        background-color: transparent;
+        }
+
+        em{
+        font-weight: 400;
+        }
+
+        /* THE INFORMATION WHEN CLICKING ONE OF THE DAYS */
+        .sidebar {
+        width: 45%; 
+        max-width: 55%;
+        min-width: 35%; 
+        height: 450px; 
+        background-color: white;
+        margin-left: 45px;
+        margin-right: 10px;
+        border: 2px solid black; 
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); 
+        }
+
+        .sidebar h4{
+        font-size: 28px;
+        margin: auto;
+        text-align: center;
+        color: black;
+        margin-left: 25px;
+        display: inline;
+        width: auto;
+        }
+
+        .sidebar-row {
+        display: flex;
+        justify-content: space-between;
+        margin:auto auto;
+        margin-top: 25px;
+        }
+
+        .sidebar-row h4 {
+        width: 45%;
+        }
+
+        #book-hearing{
+        font-size:27px;
+        width:30%;
+        margin: 15px;
+        margin:auto auto;
+        height:3em;
+        text-align: center;
+        }
+
+        #price-text{
+        text-align: left; 
+        margin-left:53px; 
+        font-size:50px
+        }
+
+        #hearing-button{
+        margin-left:auto; 
+        display: flex;
+        justify-content: center; 
+        align-items: center; 
+        width:27%; 
+        margin-right:auto;
+        padding: 0;
+        }
+
+        .calendar, #nineteen, #twenty-one, #twenty-two, #twenty-four, #twenty-five, #twenty-six, #twenty-eight, #twenty-nine, #thirty{
+        display: none;
+        }
+
+        /* MOBILE VIEW SPECIFICS FOR HEARING_TEST */
+
+        @media (min-width: 275px) and (max-width: 650px) {
+
+        .calendar, #nineteen, #twenty-one, #twenty-two, #twenty-four, #twenty-five, #twenty-six, #twenty-eight, #twenty-nine, #thirty{
+        display: none;
+        }
+
+        .nav-bar{
+        visibility: hidden;
+        }
+
+        .info h1, #price-text{
+        font-size: 24px;
+        text-align: center;
+        }
+
+        #price-text{
+        margin: 10px 30px;
+        padding-top: 30px;
+        }
+
+        .empty{
+        display: none;
+        }
+
+        .choose{
+        box-shadow: none;
+        margin-top: 30px;
+        display: block;
+        }
+
+        .choose h1{
+        font-size: 20px;
+        text-align: center;
+        margin: 30px 15px;
+        margin-top: 10px;
+        margin-bottom: 15px;
+        }
+
+        .radio-group2 {
+        margin: auto;
+        width: 100%;
+        margin-bottom: -20px;
+
+        }
+
+        .choose label{
+        font-size: 16px;
+        width: 90%;
+        margin-left: 1%;
+
+        }
+        .choose .container_from_earwax2{
+        width: 95%;
+        }
+
+        .container_from_earwax2 .button{
+        font-size: 14px;
+        width: auto;
+        margin: auto;
+        padding: 10px;
+        max-width: none;
+        }
+
+        .month{
+        font-size: 26px;
+        padding-bottom: 10px;
+        }
+
+        .appointment{
+        display: block;
+        }
+
+        .days, .day, .withappont{
+        width: auto;
+        margin-left: 10px;
+        font-size: 14px;
+        grid-template-columns: repeat(4, 1fr);
+        }
+
+        .sidebar{
+        padding: 0 0;
+        margin: 14px 14px;
+        width: auto;
+        min-width: none;
+        max-width: none;
+        height: auto;
+
+        }
+
+        .sidebar-row h4{
+        font-size: 18px;
+        padding-bottom: 20px;
+        margin-left: 13px;
+        }
+
+        #book-hearing{
+        font-size: 15px;
+        margin-left: 10px;
+        margin-top: 8px;
+        width: 30%;
+        }
+
+        .info p{
+        font-size: 16px;
+        }
+
+        .info strong {
+        font-size: 22px;
+        }
+        }
+
+        
+        /* TABLET VIEW SPECIFICS FOR HEARING_TEST */
+
+        @media (min-width: 650.1px) and (max-width: 1075px) {
+
+        .calendar, #nineteen, #twenty-one, #twenty-two, #twenty-four, #twenty-five, #twenty-six, #twenty-eight, #twenty-nine, #thirty{
+        display: none;
+        }
+
+        .info h1, #price-text{
+        font-size: 24px;
+        text-align: center;
+        }
+
+        #price-text{
+        margin: 10px 30px;
+        padding-top: 30px;
+        }
+
+        .empty{
+        display: none;
+        }
+
+        .choose{
+        box-shadow: none;
+        margin-top: 30px;
+        display: block;
+        }
+
+        .choose h1{
+        font-size: 20px;
+        text-align: center;
+        margin: 30px 15px;
+        margin-top: 10px;
+        margin-bottom: 15px;
+        }
+
+        .radio-group2 {
+        margin: auto;
+        width: 100%;
+        margin-bottom: -20px;
+        }
+
+        .choose label{
+        font-size: 16px;
+        width: 90%;
+        margin-left: 1%;
+        }
+
+        .choose .container_from_earwax2{
+        width: auto;
+        margin-left: 16.5%;
+        margin-bottom: 40px;
+        }
+
+        .container_from_earwax2 .button{
+        font-size: 14px;
+        width: 260px;
+        height: 60px;
+        margin: auto;
+        padding: 10px;
+        max-width: none;
+        }
+
+        .month{
+        font-size: 26px;
+        padding-bottom: 10px;
+        }
+
+        .appointment{
+        display: block;
+        }
+
+        .days, .day, .withappont{
+        width: auto;
+        margin-left: 10px;
+        font-size: 14px;
+        grid-template-columns: repeat(7, 1fr);
+        }
+
+        .sidebar{
+        padding: 0 0;
+        margin: 14px 14px;
+        width: auto;
+        min-width: none;
+        max-width: none;
+        height: auto;
+        }
+
+        .sidebar-row h4{
+        font-size: 18px;
+        padding-bottom: 20px;
+        margin-left: 13px;
+        }
+
+        #book-hearing{
+        font-size: 15px;
+        margin-left: 10px;
+        margin-top: 8px;
+        width: 30%;
+        }
+
+        .info p{
+        font-size: 16px;
+        }
+
+        .info strong {
+        font-size: 22px;
+        }
+        }
+
+    </style>
+
+    <link rel="shortcut icon" href="images/www.hearingfirst.co.uk.ico">
+    <link rel="icon" type="image/png" sizes="32x32" href="images/wwwhearingfirst.png">
+    <link rel="apple-touch-icon" sizes="180x180" href="images/images/wwwhearingfirst.png">
+    <link rel="icon" sizes="192x192" href="images/images/wwwhearingfirst.png">
+</head>
+
+<body>
+
+    <header>
+        <div class="blue-box">
+            <a href="login.html" class="text">
+            <span>Login / Register</span>
+            </a> &nbsp;
+            <span class="dot"></span>
+            <span class="call-us"><a href="tel:0800-1-337-987" style="color: white; text-decoration:none;">Call Us! : 0800 1 337 987</a></span>
+        </div>
+        <div class="white-box" > 
+            <img src="images/cropped-Hearing-First-Logo-For-Web.png" alt="Hearing First.logo">
+            <div class="nav-bar">
+                <ul class="nav-links">
+                    <li><a href="index.html">HOME</a></li>
+                    <li><a href="service.html">SERVICES</a></li>
+                    <li><a href="shop.html">PRODUCTS</a></li>
+                    <li><a href="about.html">ABOUT US</a></li>
+                    <li><a href="faq.html">FAQ</a></li>
+                    <li id="mobile-login"><a href="login.html">LOGIN</a></li>
+                </ul>
+                <a href="service.html" style="text-decoration: none;">
+                    <div class="book-now-button">BOOK NOW</div></a>
+            </div>
+        </div>
+    </header>
+
+    <main>
+        <div class="white-box-with-stroke" style="height: auto;">
+            <div class="blue-box-under-stroke">
+                <p id="hearingtest">Hearing Test</p>
+            </div>
+
+            <div class="info">
+            <h1 style="text-align: left;">Hearing Test (30 min)</h1>
+            <p><strong><em style="text-decoration: line-through; color:gray;">£145.00 </em> &nbsp;&nbsp; £95.00. inc VAT — 30 minutes</strong> <br><br>
+                
+            This is a quick 30 minute hearing screening test, with an explanation of the results. If you believe you have a hearing problem and want to try out the latest in hearing technology, choose our Hear In A Day® service.</p>
+
+            <h1 id="price-text">Check Prices & Availabilty / Book Appointment</h1>
+            <p>Enter what is the next available option for you in the box below and click “Find Appointments”. For your nearest clinic, choose “Nearest”.</p>
+        </div>
+
+            <div class="choose" style="margin-bottom: 0;">
+                <h1>Book An Appointment For : Hearing Test (30 min)</h1>
+
+                <div class="container_from_earwax2">
+                    <div class="radio-group2">
+                        <label>
+                            <input type="radio" name="option" value="2"> Next Available
+                        </label>
+                        <label>
+                            <input type="radio" name="option" value="3"> Nearest To Me
+                        </label>
+                    </div>
+                </div>
+
+                <div class="container_from_earwax2" id="hearing-button">
+                    <button class="button" onclick="showElementHearing()">FIND APPOINTMENT</button>
+                </div>
+            </div>
+
+            <div style="height:50px"></div>
+
+            <div class="calendar">
+                <div class="month">OCTOBER 2024</div>
+                <div class="appointment">
+                <div class="days">
+                    <div class="empty"></div>
+                    <div class="empty"></div>
+                    <div class="empty"></div>
+                    <div class="empty"></div>
+                    <div class="empty"></div>
+                    <div class="empty"></div>
+                    <div class="empty"></div>
+                    <div class="day">1</div>
+                    <div class="day">2</div>
+                    <div class="day">3</div>
+                    <div class="day">4</div>
+                    <div class="day">5</div>
+                    <div class="day">6</div>
+                    <div class="day">7</div>
+                    <div class="day">8</div>
+                    <div class="day">9</div>
+                    <div class="day">10</div>
+                    <div class="day">11</div>
+                    <div class="day">12</div>
+                    <div class="day">13</div>
+                    <div class="day">14</div>
+                    <div class="day">15</div>
+                    <div class="day">16</div>
+                    <div class="day">17</div>
+                    <div class="day">18</div>
+                    <div class="withappont" onclick="showContent('nineteen')">19</div>
+                    <div class="day">20</div>
+                    <div class="withappont" onclick="showContent('twenty-one')">21</div>
+                    <div class="withappont" onclick="showContent('twenty-two')">22</div>
+                    <div class="day">23</div>
+                    <div class="withappont" onclick="showContent('twenty-four')">24</div>
+                    <div class="withappont" onclick="showContent('twenty-five')">25</div>
+                    <div class="withappont" onclick="showContent('twenty-six')">26</div>
+                    <div class="day">27</div>
+                    <div class="withappont" onclick="showContent('twenty-eight')">28</div>
+                    <div class="withappont" onclick="showContent('twenty-nine')">29</div>
+                    <div class="withappont" onclick="showContent('thirty')">30</div>
+                    <div class="day">31</div>
+                </div>
+                
+                <div class="sidebar">
+                    <div id="nineteen" class="content-box">
+                        <div class="sidebar-row">
+                            <h4>Date   :  <em><br>October 19, <br>2024</em></h4>
+                            <h4>Time   :  <em><br>4:00 pm</em></h4>
+                        </div>
+                        <div class="sidebar-row" >
+                            <h4>Clinic :  <em><br>Canterbury</em></h4>
+                            <h4>Ear    :  <em><br>Both</em></h4>
+                        </div>
+                        <div class="sidebar-row"   >
+                            <h4>Price  :  <em><br><div style="text-decoration: line-through; font-weight:lighter;">£125</div> £55</em></h4>
+                            <button class="button" id="book-hearing">BOOK</button>
+                        </div>
+                    </div>
+
+                    <div id="twenty-one" class="content-box">
+                        <div class="sidebar-row">
+                            <h4>Date   :  <em><br>October 21, <br>2024</em></h4>
+                            <h4>Time   :  <em><br>12:00 pm</em></h4>
+                        </div>
+                        <div class="sidebar-row">
+                            <h4>Clinic :  <em><br>Ashford</em></h4>
+                            <h4>Ear    :  <em><br>Both</em></h4>
+                        </div>
+                        <div class="sidebar-row">
+                            <h4>Price  :  <em><br><div style="text-decoration: line-through; font-weight:lighter;">£125</div> £55</em></h4>
+                            <button class="button" id="book-hearing">BOOK</button>
+                        </div>
+                    </div>
+
+                    <div id="twenty-two" class="content-box">
+                        <div class="sidebar-row">
+                            <h4>Date   :  <em><br>October 22, <br>2024</em></h4>
+                            <h4>Time   :  <em><br>3:30 pm</em></h4>
+                        </div>
+                        <div class="sidebar-row">
+                            <h4>Clinic :  <em><br>Ashford</em></h4>
+                            <h4>Ear    :  <em><br>Both</em></h4>
+                        </div>
+                        <div class="sidebar-row">
+                            <h4>Price  :  <em><br><div style="text-decoration: line-through; font-weight:lighter;">£125</div> £55</em></h4>
+                            <button class="button" id="book-hearing">BOOK</button>
+                        </div>
+                    </div>
+
+                    <div id="twenty-four" class="content-box">
+                        <div class="sidebar-row">
+                            <h4>Date   :  <em><br>October 24, <br>2024</em></h4>
+                            <h4>Time   :  <em><br>5:50 pm</em></h4>
+                        </div>
+                        <div class="sidebar-row">
+                            <h4>Clinic :  <em><br>Welwyn Garden City</em></h4>
+                            <h4>Ear    :  <em><br>Both</em></h4>
+                        </div>
+                        <div class="sidebar-row">
+                            <h4>Price  :  <em><br><div style="text-decoration: line-through; font-weight:lighter;">£125</div> £55</em></h4>
+                            <button class="button" id="book-hearing">BOOK</button>
+                        </div>
+                    </div>
+
+                    <div id="twenty-five" class="content-box">
+                        <div class="sidebar-row">
+                            <h4>Date   :  <em><br>October 25, <br>2024</em></h4>
+                            <h4>Time   :  <em><br>1:30 pm</em></h4>
+                        </div>
+                        <div class="sidebar-row">
+                            <h4>Clinic :  <em><br>St. Albans</em></h4>
+                            <h4>Ear    :  <em><br>Both</em></h4>
+                        </div>
+                        <div class="sidebar-row">
+                            <h4>Price  :  <em><br><div style="text-decoration: line-through; font-weight:lighter;">£125</div> £55</em></h4>
+                            <button class="button" id="book-hearing">BOOK</button>
+                        </div>
+                    </div>
+
+                    <div id="twenty-six" class="content-box">
+                        <div class="sidebar-row">
+                            <h4>Date   :  <em><br>October 26, <br>2024</em></h4>
+                            <h4>Time   :  <em><br>10:00 am</em></h4>
+                        </div>
+                        <div class="sidebar-row">
+                            <h4>Clinic :  <em><br>Ashford</em></h4>
+                            <h4>Ear    :  <em><br>Both</em></h4>
+                        </div>
+                        <div class="sidebar-row">
+                            <h4>Price  :  <em><br><div style="text-decoration: line-through; font-weight:lighter;">£125</div> £55</em></h4>
+                            <button class="button" id="book-hearing">BOOK</button>
+                        </div>
+                    </div>
+
+                    <div id="twenty-eight" class="content-box">
+                        <div class="sidebar-row">
+                            <h4>Date   :  <em><br>October 28, <br>2024</em></h4>
+                            <h4>Time   :  <em><br>11:30 am</em></h4>
+                        </div>
+                        <div class="sidebar-row">
+                            <h4>Clinic :  <em><br>Ashford</em></h4>
+                            <h4>Ear    :  <em><br>Both</em></h4>
+                        </div>
+                        <div class="sidebar-row">
+                            <h4>Price  :  <em><br><div style="text-decoration: line-through; font-weight:lighter;">£125</div> £55</em></h4>
+                            <button class="button" id="book-hearing">BOOK</button>
+                        </div>
+                    </div>
+
+                    <div id="twenty-nine" class="content-box">
+                        <div class="sidebar-row">
+                            <h4>Date   :  <em><br>October 29, <br>2024</em></h4>
+                            <h4>Time   :  <em><br>5:00 pm</em></h4>
+                        </div>
+                        <div class="sidebar-row">
+                            <h4>Clinic :  <em><br>Welwyn Garden City</em></h4>
+                            <h4>Ear    :  <em><br>Both</em></h4>
+                        </div>
+                        <div class="sidebar-row">
+                            <h4>Price  :  <em><br><div style="text-decoration: line-through; font-weight:lighter;">£125</div> £55</em></h4>
+                            <button class="button" id="book-hearing">BOOK</button>
+                        </div>
+                    </div>
+
+                    <div id="thirty" class="content-box">
+                        <div class="sidebar-row">
+                            <h4>Date   :  <em><br>October 30, <br>2024</em></h4>
+                            <h4>Time   :  <em><br>3:00 pm</em></h4>
+                        </div>
+                        <div class="sidebar-row">
+                            <h4>Clinic :  <em><br>Canterbury</em></h4>
+                            <h4>Ear    :  <em><br>Both</em></h4>
+                        </div>
+                        <div class="sidebar-row">
+                            <h4>Price  :  <em><br><div style="text-decoration: line-through; font-weight:lighter;">£125</div> £55</em></h4>
+                            <button class="button" id="book-hearing">BOOK</button>
+                        </div>
+                    </div>
+
+            </div>
+            </div>
+
+        
+        
+        </div>
+        <div style="height:50px"></div>
+        </div>
+
+        
+
+    </main>
+
+    <script>
+        function showElementHearing() {
+            const selectedOption = document.querySelector('input[name="option"]:checked');
+          
+            if (!selectedOption) {
+                alert("Please select an option before proceeding.");
+                return;
+            }
+          
+            const calendar = document.querySelector(".calendar");
+            calendar.style.display = "block";
+          
+          }
+
+    </script>
+    <script src="script.js"></script>
+
+
+    <footer>
+        <svg width="100%" height="auto" viewBox="0 0 1200 200" xmlns="http://www.w3.org/2000/svg">
+            <image href="images/footpage.png" width="1200" height="200" alt="@ Hearing First" />
+            <a href="index.html">
+                <rect x="515" y="50" width="50" height="25" fill="transparent" />
+            </a>
+            <a href="service.html">
+                <rect x="580" y="50" width="65" height="25" fill="transparent" />
+            </a>
+            <a href="shop.html">
+                <rect x="667" y="50" width="73" height="25" fill="transparent" />
+            </a>
+            <a href="about.html">
+                <rect x="765" y="50" width="65" height="25" fill="transparent" />
+            </a>
+            <a href="faq.html">
+                <rect x="855" y="50" width="32" height="25" fill="transparent" />
+            </a>
+
+            <a href="https://www.youtube.com/c/HearingFirst" target="_blank">
+                <rect x="515" y="125" width="40" height="30" fill="transparent" />
+            </a>
+            <a href="https://www.facebook.com/HearingFirstUK/" target="_blank">
+                <rect x="560" y="125" width="40" height="30" fill="transparent" />
+            </a>
+            <a href="https://x.com/hearingfirstuk" target="_blank">
+                <rect x="605" y="125" width="40" height="30" fill="transparent" />
+            </a>
+
+            <a href="mailto:hearingfirst.co.ok@gmail.com">
+                <rect x="970" y="110" width="190" height="45" fill="transparent" />
+            </a>
+            <a href="tel:0800-1-337-987">
+                <rect x="970" y="55" width="190" height="45" fill="transparent" />
+            </a>
+
+            <a href="index.html">
+                <rect x="58" y="30" width="380" height="120" fill="transparent" />
+            </a>
+        </svg>
+    </footer>
+</body>
+</html>
